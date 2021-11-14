@@ -29,18 +29,17 @@ function createTaskID() {
 
 function addTask(name, priority) {
 	newList.push( {id: createTaskID(), name, status: 'TODO', priority} );
-	let id = 1;
 }
 
 function deleteTask(name) {
-	let taskToDelete = name;
+	const taskToDelete = name;
 	newList.filter(item => item.name !== taskToDelete);
 }
 
 function showList() {
 
 	console.log('To Do:');
-	let toDoTasks = newList.filter(item => item.status == 'TODO');
+	const toDoTasks = newList.filter(item => item.status == 'TODO');
 	if(toDoTasks == false) {
 		console.log('-');
 	} else {
@@ -50,7 +49,7 @@ function showList() {
 	}
 
 	console.log('In Progress:');
-	let tasksInProgress = newList.filter(item => item.status == 'In progress');
+	const tasksInProgress = newList.filter(item => item.status == 'In progress');
 	if(tasksInProgress == false) {
 		console.log('-');
 	} else {
@@ -60,7 +59,7 @@ function showList() {
 	}
 
 	console.log('Done:');
-	let tasksDone = newList.filter(item => item.status == 'Done');
+	const tasksDone = newList.filter(item => item.status == 'Done');
 	if(tasksDone == false) {
 		console.log('-');
 	} else {

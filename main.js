@@ -21,9 +21,9 @@ function changeStatus(name, status) {
 }
 
 function createTaskID() {
-	const arrayOfBusyIDs = newList.map(task => task.id);
-	for (let i = 1; i <= arrayOfBusyIDs.length + 1; i++) {
-		if (!arrayOfBusyIDs.includes(i)) return i;
+	const usedIDs = newList.map(task => task.id);
+	for (let i = 1; i <= usedIDs.length + 1; i++) {
+		if (!usedIDs.includes(i)) return i;
 	}
 }
 

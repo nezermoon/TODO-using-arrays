@@ -17,7 +17,6 @@ let newList = list;
 
 function changeStatus(name, status) {
 	const statusToChange = list.find(item => item.name == name);
-	statusToChange.status = status;
 }
 
 function createTaskID() {
